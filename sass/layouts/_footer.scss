@@ -1,0 +1,80 @@
+.footer{
+    background-color: $color-dark-gray-2;
+    padding: 8rem 0;
+    font-size: 1.4rem;
+    color: $color-light-gray-1;
+
+    @include responsive(tab-port){
+        padding: 6rem 0;
+    }
+
+    &__logo-box{
+        text-align: center;
+        margin-bottom: 4rem;
+
+        @include responsive(phone){
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    &__logo{
+        max-width: 25rem;
+        height: auto;
+
+    }
+
+    &__navigation{
+        border-top: 1px solid $color-light-gray-2;
+        padding: 2rem 0;
+        display: inline-block;
+
+        @include responsive(tab-port){
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+
+    &__list{
+        list-style: none;
+    }
+
+    &__item{
+        display: inline-block;
+
+        &:not(:last-child){
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            color: $color-light-gray-1;
+            background-color: $color-dark-gray-2;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active{
+            color: $color-primary-light-1;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            transform: rotate(5deg) scale(1.3);
+        }
+    }
+
+    &__copyright{
+        border-top: 1px solid $color-light-gray-2;
+        padding: 2rem 0;
+        display: inline-block;
+
+        @include responsive(tab-port){
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
